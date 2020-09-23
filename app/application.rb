@@ -77,7 +77,7 @@ class Application
       else
         resp.write "Your cart is empty"
       end
-     else
+   else
       resp.write "Path Not Found"
     end
 
