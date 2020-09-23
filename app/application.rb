@@ -72,7 +72,6 @@ class Application
       search_term = req.params["i"]
       resp.write handle_search(search_term)
     elsif req.path.match(/add/)
-    binding.pry
       search_term = req.params["i"]
        if @@items.include?(search_term)
         @@cart << search_term
