@@ -28,3 +28,29 @@ class Application
     end
   end
 end
+
+
+
+  @@cart = []
+ 
+  def call(env)
+    resp = Rack::Response.new
+    req = Rack::Request.new(env)
+ 
+    if req.path.match(/cart/)
+      @@cart.each do |c|
+        resp.write "#{c}\n"
+      end
+    elsif req.path.match(/search/)
+ 
+      search_term = req.params["q"]
+ 
+      if @@cart.include?(search_term)
+        @@cart << item
+      else
+        resp.write "Your cart is empty"
+      end
+ 
+    resp.finish
+  end
+end
