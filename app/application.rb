@@ -74,7 +74,7 @@ class Application
     elsif req.path.match(/add/)
       search_term = req.params["i"]
       puts search_term 
-      puts req.params[]
+      puts req.params
       puts "I am here"
        if @@items.include?(search_term)
         @@cart << search_term
