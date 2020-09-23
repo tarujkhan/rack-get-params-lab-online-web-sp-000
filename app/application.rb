@@ -73,7 +73,7 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path.match(/add/)
       search_term = req.params["i"]
-      puts search_term = req.params["i"]
+      puts search_term 
        if @@items.include?(search_term)
         @@cart << search_term
         resp.write "added #{search_term}"
