@@ -63,8 +63,8 @@ class Application
         resp.write "Your cart is empty"
       else
         @@cart.each do |c|
-        resp.write "#{c}\n"
-      end 
+          resp.write "#{c}\n"
+        end 
 end
       
     if req.path.match(/search/)
