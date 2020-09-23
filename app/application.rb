@@ -75,7 +75,7 @@ class Application
         @@cart << search_term
         resp.write "added #{search_term}"
       else
-        resp.write "We don't have that item"
+        resp.write "We don't have that #{search_term}"
       end
    else
       resp.write "Path Not Found"
