@@ -44,7 +44,7 @@ else
         resp.write "#{c}\n"
       end 
 end
-end
+
     elsif req.path.match(/add/)
  
       search_term = req.params["q"]
