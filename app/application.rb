@@ -71,13 +71,14 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path.match(/add/)
       search_term = req.params["i"]
-       if @@items.include?(search_term)
-        @@cart << search_term
-        resp.write "added #{search_term}\n"
-      else
-        resp.write "We don't have that item"
-      end
-   else
+      if handle_search(search_term)
+  #     if @@items.include?(search_term)
+  #       @@cart << search_term
+  #       resp.write "added #{search_term}\n"
+  #     else
+  #       resp.write "We don't have that item"
+  #     end
+  # else
       resp.write "Path Not Found"
     end
 
