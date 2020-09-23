@@ -73,7 +73,7 @@ class Application
       search_term = req.params["i"]
        if @@items.include?(search_term)
         @@cart << search_term
-        @@cart
+        resp.write "added "
       else
         resp.write "Your cart is empty"
       end
