@@ -43,7 +43,7 @@ else
       @@cart.each do |c|
         resp.write "#{c}\n"
       end 
-
+end
     if req.path.match(/add/)
  
       search_term = req.params["q"]
