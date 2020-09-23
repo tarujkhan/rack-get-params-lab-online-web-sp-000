@@ -70,10 +70,8 @@ class Application
       search_term = req.params["q"]
       resp.write handle_search(search_term)
     elsif req.path.match(/add/)
- 
       search_term = req.params["q"]
- 
-      if @@items.include?(search_term)
+       if @@items.include?(search_term)
         @@cart << item
         @@cart
       else
