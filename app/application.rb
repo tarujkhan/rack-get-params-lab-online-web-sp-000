@@ -72,7 +72,7 @@ class Application
     elsif req.path.match(/add/)
       search_term = req.params["q"]
        if @@items.include?(search_term)
-        @@cart << item
+        @@cart << search_term
         @@cart
       else
         resp.write "Your cart is empty"
