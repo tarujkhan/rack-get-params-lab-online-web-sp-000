@@ -33,9 +33,9 @@ end
 
   @@cart = []
  
-  def call(env)
-    resp = Rack::Response.new
-    req = Rack::Request.new(env)
+  # def call(env)
+  #   resp = Rack::Response.new
+  #   req = Rack::Request.new(env)
   if req.path.match(/cart/)
    if @@cart.empty?
       resp.write "Your cart is empty"
