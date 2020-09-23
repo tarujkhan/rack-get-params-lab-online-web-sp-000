@@ -65,7 +65,7 @@ class Application
         @@cart.each do |c|
           resp.write "#{c}\n"
         end 
-end
+    end
       
     if req.path.match(/search/)
       search_term = req.params["q"]
